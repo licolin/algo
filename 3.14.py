@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # Author: li_colin
-# 链表
+# 无序链表
 import time
 
 
