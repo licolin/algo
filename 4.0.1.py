@@ -34,12 +34,12 @@ def recurse_source2base(val, base):
 # 进制转换 递归解法
 def recurse_source2base1(val, base):
     digits = "0123456789ABCDEF"
-    if int(val) < base:
-        return str(val)
+    if not val:
+        return ""
     if val:
         return recurse_source2base(val // base, base) + str(digits[val % base])
 
 
 print(get_sum([1, 2, 3, 4, 5, 6]))
-print(list_source2base(55, 16))
-print(recurse_source2base(55, 16))
+print(list_source2base(55, 7))
+print(recurse_source2base1(55, 7))
