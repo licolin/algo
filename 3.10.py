@@ -1,9 +1,6 @@
 # -*- encoding: utf-8 -*-
 # Author: li_colin
-# 很好的栗子
-# 模拟打印机队列 在不同的打印模式下(粗打,精打),模拟出用户需要等待的时间.
-import random
-
+# 一群人,循环报数,报到特定数的人出列,求解最后剩下的人是谁
 
 class Queue:
     def __init__(self):
