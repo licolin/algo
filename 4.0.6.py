@@ -14,4 +14,4 @@ def move_tower(_from, _with, _to, height):
         move_tower(_with, _from, _to, height - 1)
 
 
-move_tower("#1", "#2", "#3", 2)
+move_tower("#1", "#2", "#3", 3)
