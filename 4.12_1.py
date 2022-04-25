@@ -13,21 +13,28 @@
 # - 4 ------- 5 --------8-----
 # - 1 ------- 9 --------10----
 
-weights = [2, 3, 4, 5, 9]
-value = [3, 4, 8, 8, 10]
 total = 20
+elements = {(2, 3), (3, 4), (4, 8), (5, 8), (9, 10)}
 
 
-def get_value(val, w, t):
-    # if t == 0:
-    #     return 0
-    # if t in weights:
-    #     return value[weights.index(total)]
-    # _max = 0
-    # for ele in weights:
-    #     if ele < t:
-    #         tmp = get_value(weights.remove(ele))
-    pass
+def solution(args, c):
+    m = {}
+
+    def get_value(val, t):
+        if t == 0 or not val:
+            return 0
+        if t in m:
+            return m[t]
+        else:
+            _max = 0
+            for ele in val:
+                if ele[0] <= t:
+                    tmp = get_value(val - {ele}, t - ele[0]) + ele[1]
+                    _max = max(tmp, _max)
+            m[tuple(val), t] = _max
+        return _max
+
+    return get_value(args, c)
 
 
-print(get_value(value, weights, 20))
+print(solution(elements, 20))
