@@ -3,6 +3,7 @@
 # 冒泡排序
 # 选择排序
 # 插入排序
+# 希尔排序
 
 def bubble_sort(lists):
     for i in range(len(lists)):
@@ -27,35 +28,33 @@ def select_sort(lists):
 
 print(select_sort([1, 3, 2, 5, 9, 4, 2]))
 
-lists = [1, 2]
-lists.insert(2, 3)
-print(lists)
-
 
 def insert_sort(lists):
-    ret = []
-    for ele in lists:
-        if len(ret) < 2:
-            if not ret:
-                ret.append(ele)
-            else:
-                if ele <= ret[0]:
-                    ret.insert(0, ele)
-                else:
-                    ret.insert(1, ele)
-        else:
-            if ele <= ret[0]:
-                ret.insert(0, ele)
-            elif ele >= ret[len(ret) - 1]:
-                ret.insert(len(ret), ele)
-            else:
-                for r in range(len(ret) - 1):
-                    if ret[r] <= ele <= ret[r + 1]:
-                        ret.insert(r + 1, ele)
-                        # 跳出这层循环
-                        break
-
-    return ret
+    for i in range(1, len(lists)):
+        position = i
+        while position > 0 and lists[position] < lists[position - 1]:
+            lists[position], lists[position - 1] = lists[position - 1], lists[position]
+            position = position - 1
+    return lists
 
 
 print(insert_sort([1, 3, 2, 5, 9, 4, 2]))
+
+
+def shell_sort(lists):
+    def shell_insert(start, lists, n):
+        for i in range(start, len(lists), n):
+            position = i
+            while position > start and lists[position] < lists[position - n]:
+                lists[position], lists[position - n] = lists[position - n], lists[position]
+                position = position - n
+
+    gap = len(lists) // 2
+    while gap:
+        for j in range(2):
+            shell_insert(j, lists, gap)
+        gap = gap // 2
+    return lists
+
+
+print(shell_sort([1, 3, 2, 5, 9, 4, 2, 10, 56, 18, 15, 66, 12]))
