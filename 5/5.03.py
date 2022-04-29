@@ -5,6 +5,7 @@
 # 插入排序
 # 希尔排序
 
+# 冒泡排序
 def bubble_sort(lists):
     for i in range(len(lists)):
         for j in range(len(lists) - i - 1):
@@ -16,6 +17,7 @@ def bubble_sort(lists):
 print(bubble_sort([1, 3, 2, 5, 9, 4, 2]))
 
 
+# 选择排序
 def select_sort(lists):
     for i in range(len(lists)):
         position = 0
@@ -29,6 +31,7 @@ def select_sort(lists):
 print(select_sort([1, 3, 2, 5, 9, 4, 2]))
 
 
+# 插入排序
 def insert_sort(lists):
     for i in range(1, len(lists)):
         position = i
@@ -41,6 +44,7 @@ def insert_sort(lists):
 print(insert_sort([1, 3, 2, 5, 9, 4, 2]))
 
 
+# 希尔排序
 def shell_sort(lists):
     def shell_insert(start, lists, n):
         for i in range(start, len(lists), n):
