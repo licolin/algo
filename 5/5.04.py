@@ -15,7 +15,6 @@ def merge_sort(_list):
         else:
             merge.append(right.pop(0))
     merge.extend(left if left else right)
-    print("merge is :", merge)
     return merge
 
 
