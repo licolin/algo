@@ -36,10 +36,6 @@ class BinaryTree:
     def getRightChild(tree):
         return tree[2]
 
-    @staticmethod
-    def getLeftChild(tree):
-        return tree[1]
-
 
 bt = BinaryTree()
 
