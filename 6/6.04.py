@@ -43,8 +43,7 @@ class BinaryTree:
 
 bt = BinaryTree(1)
 bt.insertRight(2)
-bt_r = bt.getRight()
-bt_r.insertRight(3)
-bt_r.insertLeft(6)
+bt.getRight().insertRight(3)
+bt.getRight().insertLeft(6)
 print(bt.data)
 print(bt.right.left.data)
