@@ -36,6 +36,14 @@ class BinaryTree:
     def getRightChild(tree):
         return tree[2]
 
+    @staticmethod
+    def _setRootVal(tree, val):
+        tree[0] = val
+
+    @staticmethod
+    def getRootVal(tree):
+        return tree[0]
+
 
 bt = BinaryTree()
 

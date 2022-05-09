@@ -3,12 +3,6 @@
 # 二叉树
 # 链表实现
 
-# class Node:
-#     def __init__(self, val):
-#         self.data = val
-#         self.left = None
-#         self.right = None
-
 
 class BinaryTree:
     def __init__(self, val):
@@ -39,6 +33,12 @@ class BinaryTree:
 
     def getRight(self):
         return self.right
+
+    def setRootVal(self, val):
+        self.data = val
+
+    def getRootVal(self):
+        return self.data
 
 
 bt = BinaryTree(1)
