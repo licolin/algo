@@ -2,6 +2,7 @@
 # Author: li_colin
 # 二叉树
 # 列表实现
+# 实现有问题
 
 
 class BinaryTree:
