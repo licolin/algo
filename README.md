@@ -29,3 +29,4 @@
     - 6.07 二叉树遍历.
     - 6.08 BinaryHeap 二叉堆.
 - **other**
+    - mark csapp page-67.
