@@ -44,10 +44,18 @@ class BST:
                 root.right = node
                 node.parent = root
 
+    def iter(self, root):
+        print(root.val)
+        if root.hasLeftChild():
+            self.iter(root.hasLeftChild())
+        if root.hasRightChild():
+            self.iter(root.hasRightChild())
+
 
 bst = BST()
 bst.insertNode(Node(12, 1))
 bst.insertNode(Node(8, 5))
 bst.insertNode(Node(15, 7))
 bst.insertNode(Node(19, 20))
+bst.iter(bst.root)
 print(bst.root.right.right.key)
