@@ -21,7 +21,6 @@ class Node:
 class BST:
     def __init__(self):
         self.root = None
-        self.current = None
 
     def insertNode(self, node):
         if self.root is None:
