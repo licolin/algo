@@ -30,4 +30,4 @@
     - 6.08 BinaryHeap 二叉堆.
     - 6.09 BST 二叉搜素树.
 - **other**
-    - mark csapp page-67.
+    - mark csapp page-69.
