@@ -41,7 +41,6 @@ class BST:
         else:
             self.put(node, self.root)
 
-    # @staticmethod
     def put(self, node, root):
         if node.key < root.key:
             if root.hasLeftChild():
@@ -110,5 +109,3 @@ bst.iter(bst.root)
 bst.delete(bst.root, 12)
 print("delete")
 bst.iter(bst.root)
-# print(bst.get(bst.root, 15).val)
-# print(bst.root.right.right.key)
