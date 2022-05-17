@@ -10,11 +10,24 @@ class TreeNode:
         self.left = None
         self.right = None
         self.height = None
+        self.parent = None
+
+    def hasOnlyLeftChild(self):
+        return self.left is not None and self.right is None
+
+    def hasOnlyRightChild(self):
+        return self.right is not None and self.left is None
+
+    def hasBothChild(self):
+        return self.left is not None and self.right is not None
+
+    def isLeaf(self):
+        return self.left is None and self.right is None
 
 
 class AVL:
     def __init__(self):
-        pass
+        self.root = None
 
     def insert(self, root, key, val):
         if root is None:
