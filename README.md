@@ -30,5 +30,6 @@
     - 6.08 BinaryHeap 二叉堆.
     - 6.09 BST 二叉搜素树.
     - 6.10 avl树.
+    - 7.01 图的实现.
 - **other**
-    - mark csapp page-69.
+    - mark csapp page-78.
