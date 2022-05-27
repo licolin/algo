@@ -64,6 +64,13 @@ def get_graph():
                 else:
                     pass
     f.close()
+    for key in bucket:
+        for word1 in bucket[key]:
+            for word2 in bucket[key]:
+                if word1 != word2:
+                    g.addEdge(word1, word2)
+    for ele in g:
+        print(ele)
 
 
 get_graph()
