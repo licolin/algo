@@ -2,11 +2,30 @@
 # Author: li_colin
 # 词梯问题
 # 构建graph
+import sys
+
+
+class Queue:
+    def __init__(self):
+        self.data = []
+
+    def enqueue(self, val):
+        self.data.insert(0, val)
+
+    def dequeue(self):
+        return self.data.pop()
+
+    def size(self):
+        return len(self.data)
+
 
 class Vertex:
     def __init__(self, key):
         self.key = key
         self.connects = {}
+        self.pre = None
+        self.dist = sys.maxsize
+        self.color = "white"
 
     def addNbr(self, nbr, weight):
         self.connects[nbr] = weight
@@ -16,6 +35,24 @@ class Vertex:
 
     def getWeight(self, key):
         return self.connects[key]
+
+    def getDistance(self):
+        return self.dist
+
+    def setDistance(self, val):
+        self.dist = val
+
+    def getConnects(self):
+        return self.connects
+
+    def setPre(self, p):
+        self.pre = p
+
+    def getPre(self):
+        return self.pre
+
+    def setColor(self, color):
+        self.color = color
 
 
 class Graph:
@@ -70,8 +107,34 @@ def get_graph():
             for word2 in bucket[key]:
                 if word1 != word2:
                     g.addEdge(word1, word2)
-    for ele in g:
-        print(ele)
+    return g
 
 
-get_graph()
+def travel(vertex):
+    x = vertex
+    while x is not None:
+        print(x.key)
+        x = x.getPre()
+
+
+gh = get_graph()
+
+
+def bfs(start):
+    start.setDistance = 0
+    start.setPre = None
+    _vertexQueue = Queue()
+    _vertexQueue.enqueue(start)
+    while _vertexQueue.size() > 0:
+        _new_vertex = _vertexQueue.dequeue()
+        for ele in _new_vertex.getConnects():
+            if ele.color == "white":
+                _vertexQueue.enqueue(ele)
+                ele.setColor("black")
+                ele.setDistance(_new_vertex.getDistance() + 1)
+                ele.setPre(_new_vertex)
+        _new_vertex.setColor("black")
+
+
+bfs(gh.getVertex("FOOL"))
+travel(gh.getVertex("SAGE"))
