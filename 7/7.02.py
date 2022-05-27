@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 # Author: li_colin
 # 词梯问题
+# 构建graph
 
 class Vertex:
     def __init__(self, key):
