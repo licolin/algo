@@ -34,7 +34,7 @@ class Graph:
         else:
             return None
 
-    def addWeight(self, f, t, val=0):
+    def addEdge(self, f, t, val=0):
         if f not in self.vertexList:
             self.addVertex(f)
         if t not in self.vertexList:
@@ -50,8 +50,8 @@ class Graph:
 
 g = Graph()
 g.addVertex("v0")
-g.addWeight("v0", "v1", 5)
-g.addWeight("v0", "v2", 3)
-g.addWeight("v1", "v2", 6)
+g.addEdge("v0", "v1", 5)
+g.addEdge("v0", "v2", 3)
+g.addEdge("v1", "v2", 6)
 for ele in g:
     print(ele)
