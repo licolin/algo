@@ -2,6 +2,7 @@
 # Author: li_colin
 # 骑士问题
 # 在8*8的棋盘格子里,马走日,找到一条路径使得马能走到每个格子且每个各自只走一次
+import sys
 
 
 class Vertex:
@@ -103,3 +104,7 @@ def genKnightGraph(body_size):
                 child_node_id = getId(ele[0], ele[1], body_size)
                 kg.addEdge(current, child_node_id)
     return kg
+
+
+for el in genKnightGraph(8):
+    print(el)
