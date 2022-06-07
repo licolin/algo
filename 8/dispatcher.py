@@ -3,16 +3,17 @@
 
 class HTTPHandler:
     def handle(self, request):
-        methname = 'do_' + request.method
+        methname = request.method
+        print(getattr(self, methname))
         getattr(self, methname)()
 
-    def do_GET(self):
+    def GET(self):
         print("do get!")
 
-    def do_POST(self):
+    def POST(self):
         print("do post!")
 
-    def do_HEAD(self):
+    def HEAD(self):
         print("do head!")
 
 
