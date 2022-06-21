@@ -1,0 +1,144 @@
+{
+    "root": {
+        "data": {
+            "id": "cfl3v90f0co0",
+            "created": 1636446494033,
+            "text": "执行流程&校验",
+            "priority": 2
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cfl3wcw3lhk0",
+                    "created": 1636446580843,
+                    "text": "api",
+                    "layout_mind_offset": {
+                        "x": 5,
+                        "y": 353
+                    },
+                    "priority": 3
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfpyukcbe8w0",
+                            "created": 1636940134567,
+                            "text": "主调接口&回调接口",
+                            "note": "Login、Logout、InsertOrder等\nonTradeEvent、onQueryAsset等"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cfpz8q190wg0",
+                                    "created": 1636941244056,
+                                    "text": " "
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cfpyuvrp84w0",
+                            "created": 1636940159441,
+                            "text": "主要特点",
+                            "note": "1 pybind11\n2 python版本3.9.7\n3 异步接口\n4 操作全局字典user_trading_info\n5 多线程调用(session区分不同线程用户)"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfl41571mc00",
+                    "created": 1636446955911,
+                    "text": "数据库操作",
+                    "layout_mind_offset": {
+                        "x": -17,
+                        "y": -4
+                    },
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfl4120zf940",
+                            "created": 1636446949015,
+                            "text": "sqlalchemy"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfl416it3080",
+                            "created": 1636446958799,
+                            "text": "1 用例库 2 初始数据库"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfl4188bd7k0",
+                            "created": 1636446962519,
+                            "text": "用例结构及定义"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cfl419irdbk0",
+                            "created": 1636446965327,
+                            "text": "初始化操做"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cfl45r2xjvk0",
+                    "created": 1636447317009,
+                    "text": "topic",
+                    "layout_mind_offset": {
+                        "x": -470,
+                        "y": -14
+                    }
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cfl45xruaw80",
+                    "created": 1636447331575,
+                    "text": "作为服务端",
+                    "layout_mind_offset": {
+                        "x": -90.00000268220901,
+                        "y": 0
+                    },
+                    "note": "1 测试的执行\n2 个性化请求参数（并发量、执行caseid等）\n3 "
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cfl4b8758dk0",
+                    "created": 1636447746089,
+                    "text": "topic"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cfl466d5zw80",
+                            "created": 1636447350279,
+                            "text": "1  定义好基类 OrderAction"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

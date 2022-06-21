@@ -7,16 +7,6 @@ import sys
 
 
 class SharedCounter:
-    """A synchronized shared counter.
-    The locking done by multiprocessing.Value ensures that only a single
-    process or thread may read or write the in-memory ctypes object. However,
-    in order to do n += 1, Python performs a read followed by a write, so a
-    second process may read the old value before the new one is written by
-    the first process. The solution is to use a multiprocessing.Lock to
-    guarantee the atomicity of the modifications to Value.
-    This class comes almost entirely from Eli Bendersky's blog:
-    http://eli.thegreenplace.net/2012/01/04/shared-counter-with-pythons-multiprocessing/
-    """
 
     def __init__(self, n=0):
         self.count = multiprocessing.Value("i", n)
@@ -33,16 +23,6 @@ class SharedCounter:
 
 
 class Queue(queues.Queue):
-    """A portable implementation of multiprocessing.Queue.
-    Because of multithreading / multiprocessing semantics, Queue.qsize() may
-    raise the NotImplementedError exception on Unix platforms like Mac OS X
-    where sem_getvalue() is not implemented. This subclass addresses this
-    problem by using a synchronized shared counter (initialized to zero) and
-    increasing / decreasing its value every time the put() and get() methods
-    are called, respectively. This not only prevents NotImplementedError from
-    being raised, but also allows us to implement a reliable version of both
-    qsize() and empty().
-    """
 
     def __init__(self, *args, **kwargs):
         if sys.version_info < (3, 0):
@@ -76,12 +56,3 @@ class Queue(queues.Queue):
     def empty(self) -> bool:
         """Reliable implementation of multiprocessing.Queue.empty()"""
         return not self.qsize() > 0
-
-
-dic = {"a": 1, "b": 2}
-
-qu = Queue()
-qu.put(dic)
-print(qu.qsize())
-print(qu.get())
-print(qu.qsize())
