@@ -1,0 +1,3 @@
+/mnt/d/net/cpp/net00/src/CMakeFiles/rebuild_cache.dir
+/mnt/d/net/cpp/net00/src/CMakeFiles/t1.dir
+/mnt/d/net/cpp/net00/src/CMakeFiles/edit_cache.dir
