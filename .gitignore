@@ -1,15 +1,15 @@
-./cpp/net00/src/CMakeFiles
-./cpp/net00/src/out
-./cpp/net00/src/CMakeCache.txt
-./cpp/net00/src/*.cmake
-./cpp/net00/src/*.bak
-./cpp/net00/utils/CMakeFiles
-./cpp/net00/utils/out
-./cpp/net00/utils/CMakeCache.txt
-./cpp/net00/utils/*.cmake
-./cpp/net00/utils/*.bak
-./cpp/net00/base/out
-./cpp/net00/.vs
+algo/cpp/net00/src/CMakeFiles
+algo/cpp/net00/src/out
+algo/cpp/net00/src/CMakeCache.txt
+algo/cpp/net00/src/*.cmake
+algo/cpp/net00/src/*.bak
+algo/cpp/net00/utils/CMakeFiles
+algo/cpp/net00/utils/out
+algo/cpp/net00/utils/CMakeCache.txt
+algo/cpp/net00/utils/*.cmake
+algo/cpp/net00/utils/*.bak
+algo/cpp/net00/base/out
+algo/cpp/net00/.vs
 
 
 
