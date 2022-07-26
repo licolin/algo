@@ -2,7 +2,6 @@
 //
 // Use of this source code is governed by a BSD-style license
 // that can be found in the License file.
-//
 // Author: Shuo Chen (chenshuo at chenshuo dot com)
 
 #include "../base/Acceptor.h"
@@ -14,8 +13,8 @@
 
 
 using namespace muduo;
-// acceptSocket_    Í¨¹ýcreateNonblockingOrDie´´½¨ socket fd(·þÎñ¶Ë)
-//  acceptChannel_ Í¨¹ý¸ÃÍ¨µÀ ¼àÌý acceptSocket_.fd() ÊÂ¼þ
+// acceptSocket_    Í¨ï¿½ï¿½createNonblockingOrDieï¿½ï¿½ï¿½ï¿½ socket fd(ï¿½ï¿½ï¿½ï¿½ï¿½)
+//  acceptChannel_ Í¨ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ acceptSocket_.fd() ï¿½Â¼ï¿½
 Acceptor::Acceptor(EventLoop* loop, const InetAddress& listenAddr)
   : loop_(loop),
     acceptSocket_(sockets::createNonblockingOrDie()),
@@ -24,7 +23,7 @@ Acceptor::Acceptor(EventLoop* loop, const InetAddress& listenAddr)
 {
   acceptSocket_.setReuseAddr(true);
   acceptSocket_.bindAddress(listenAddr);
-  // ¸ø acceptChannel_ Í¨µÀÉèÖÃ»Øµ÷º¯Êý
+  // ï¿½ï¿½ acceptChannel_ Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Ã»Øµï¿½ï¿½ï¿½ï¿½ï¿½
   acceptChannel_.setReadCallback(
       std::bind(&Acceptor::handleRead, this));
 }
