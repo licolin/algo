@@ -1,0 +1,7 @@
+first
+1 fork from other repository
+2 git clone to local
+3 git checkout -b fix-something-new-branch  //差不多拉个分支出来的意思
+4 do something you want to do
+5 git push origin fix-something-new-branch // 与3分支名字相同
+6
