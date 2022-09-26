@@ -4,4 +4,6 @@ first
 3 git checkout -b fix-something-new-branch  //差不多拉个分支出来的意思
 4 do something you want to do
 5 git push origin fix-something-new-branch // 与3分支名字相同
-6
+6.1 git remote add upstream xxxx.git //xxxx.git 是原作者代码地址(可以是某个特性分支) 想同步到local的
+6.2 git checkout fix-something-new-branch //切换到想要同步原代码的分支
+6.3 git pull --rebase upstream fix-something-new-branch // fix-something-new-branch 原代码改动的分支
