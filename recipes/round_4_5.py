@@ -25,9 +25,9 @@ def round_up(value):
 
 
 print(smart_round(2.5, 0), " ", round2(2.5), " ", round_up(2.5))
-print(smart_round(2.205, 2), " ", round2(2.205), " ", round_up(2.205))
+print(smart_round(2.205, 2), " ", round2(2.205678), " ", round_up(2.205))
 print(smart_round(2.215, 2), " ", round2(2.215), " ", round_up(2.215))
-print(smart_round(2.225, 2), " ", round2(2.225), " ", round_up(2.225))
+print(smart_round(2.225, 2), " ", round2(2.225678), " ", round_up(2.225))
 print(smart_round(2.235, 2), " ", round2(2.235), " ", round_up(2.235))
 print(smart_round(2.245, 2), " ", round2(2.245), " ", round_up(2.245))
 print(smart_round(2.255, 2), " ", round2(2.255), " ", round_up(2.255))
