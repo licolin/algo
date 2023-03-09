@@ -9,6 +9,7 @@ def numbers():
         i += ret
         print(i)
 
+
 def print_func(dic):
     print(dic)
 
